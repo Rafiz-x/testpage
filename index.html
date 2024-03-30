@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Button</title>
+      <style>
+         body {
+            font-family: "Nunito", sans-serif;
+            background: #10131c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+         }
+         .btn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border: 1px solid #707070;
+            height: 66px;
+            width: 250px;
+            cursor: pointer;
+         }
+
+         .btn::before,
+         .btn::after {
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            transition: 0.5s ease;
+            
+         }
+         .btn::before {
+            top: -1px;
+            left: -1px;
+            border-top: 1px solid #fff;
+            border-left: 1px solid #fff;
+         }
+         .btn::after {
+            bottom: -1px;
+            right: -1px;
+            height: 8px;
+            width: 8px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+         }
+         .btn:hover::before,
+         .btn:hover::after {
+            width: 100%;
+         }
+
+         .btn i {
+            font-style: normal;
+            color: #fff;
+            font-weight: 900;
+            font-size: 26px;
+            letter-spacing: 0.2px;
+         }
+
+         .btn i::before,
+         .btn i::after {
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            transition: 0.5s ease;
+         }
+         .btn i::before {
+            top: -1px;
+            right: -1px;
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+         }
+         .btn i::after {
+            bottom: -1px;
+            left: -1px;
+            height: 8px;
+            width: 8px;
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+         }
+         .btn:hover i::before,
+         .btn:hover i::after {
+            height: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <a href="https://www.youtube.com/@rsx2866" class="btn">
+         <i>SUBSCRIBE</i>
+      </a>
+   </body>
+</html>
